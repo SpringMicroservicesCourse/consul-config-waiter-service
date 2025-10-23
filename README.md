@@ -213,6 +213,8 @@ spring.jpa.properties.hibernate.show_sql=true
 # 監控端點設定
 management.endpoints.web.exposure.include=*
 management.endpoint.health.show-details=always
+# 確保 Info 端點顯示所有 info.* 屬性，這是 Spring Boot 3.x 的行為，在 Spring Boot 2.x 中不需要這個設定
+management.info.env.enabled=true
 
 # Resilience4j 限流設定
 resilience4j.ratelimiter.instances.coffee.limit-for-period=5

@@ -17,7 +17,6 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
-import java.io.Serializable;
 import java.util.List;
 
 @Entity
@@ -28,7 +27,9 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CoffeeOrder extends BaseEntity implements Serializable {
+public class CoffeeOrder extends BaseEntity{
+    private static final long serialVersionUID = 1L;
+
     private String customer;
     @ManyToMany
     @JoinTable(name = "T_ORDER_COFFEE")
